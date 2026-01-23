@@ -21,4 +21,4 @@ while True:
             break
     else:
             continue
-        
+# Simple Calculator Program
