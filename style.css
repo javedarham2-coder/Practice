@@ -7,6 +7,31 @@
   transition: background-color 0.3s ease;
 }
 
+@media (max-width: 1024px) {
+  .frame {
+    min-width: auto;
+    width: 100%;
+    min-height: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .frame {
+    min-width: auto;
+    width: 100%;
+    min-height: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+}
+
 .frame .iphone-pro-x {
   position: absolute;
   top: 264px;
@@ -16,6 +41,12 @@
   background-color: #5fbdff8c;
   border-radius: 39px;
   filter: blur(61.5px);
+}
+
+@media (max-width: 1024px) {
+  .frame .iphone-pro-x {
+    display: none;
+  }
 }
 
 .frame .div {
@@ -30,6 +61,42 @@
   backdrop-filter: blur(51px) brightness(100%);
   -webkit-backdrop-filter: blur(51px) brightness(100%);
   transition: background-color 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .frame .div {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+    aspect-ratio: 430 / 950;
+  }
+}
+
+@media (max-width: 768px) {
+  .frame .div {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 400 / 900;
+  }
+}
+
+@media (max-width: 480px) {
+  .frame .div {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 360 / 800;
+  }
 }
 
 .frame .div-wrapper {
@@ -505,6 +572,18 @@
   transition: color 0.3s ease;
 }
 
+@media (max-width: 768px) {
+  .frame .text-wrapper-6 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .frame .text-wrapper-6 {
+    font-size: 28px;
+  }
+}
+
 .frame .element {
   position: absolute;
   top: 138px;
@@ -516,6 +595,18 @@
   letter-spacing: 0;
   line-height: normal;
   transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .frame .element {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .frame .element {
+    font-size: 14px;
+  }
 }
 
 .frame .span {
@@ -697,4 +788,113 @@
 
 .theme-toggle:active {
   transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    padding: 10px 16px;
+    font-size: 12px;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-toggle {
+    padding: 8px 12px;
+    font-size: 10px;
+    top: 8px;
+    right: 8px;
+  }
+}
+
+/* Responsive button sizing */
+@media (max-width: 1024px) {
+  .frame .div-wrapper,
+  .frame .div-wrapper-2,
+  .frame .div-wrapper-3,
+  .frame .div-wrapper-4,
+  .frame .div-wrapper-5,
+  .frame .div-wrapper-6,
+  .frame .div-wrapper-7,
+  .frame .div-wrapper-8,
+  .frame .div-wrapper-9,
+  .frame .div-wrapper-10,
+  .frame .div-wrapper-11,
+  .frame .div-wrapper-12,
+  .frame .div-wrapper-13,
+  .frame .div-wrapper-14,
+  .frame .div-wrapper-15,
+  .frame .img-wrapper,
+  .frame .group-2,
+  .frame .vector-wrapper,
+  .frame .group {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 8px;
+  }
+
+  .frame .div-wrapper {
+    width: calc(50% - 16px) !important;
+    height: 60px;
+  }
+
+  .frame .text-wrapper-4,
+  .frame .text-wrapper-5 {
+    font-size: 24px;
+  }
+
+  .frame .text-wrapper,
+  .frame .text-wrapper-2,
+  .frame .text-wrapper-3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .frame .div-wrapper,
+  .frame .div-wrapper-2,
+  .frame .div-wrapper-3,
+  .frame .div-wrapper-4,
+  .frame .div-wrapper-5,
+  .frame .div-wrapper-6,
+  .frame .div-wrapper-7,
+  .frame .div-wrapper-8,
+  .frame .div-wrapper-9,
+  .frame .div-wrapper-10,
+  .frame .div-wrapper-11,
+  .frame .div-wrapper-12,
+  .frame .div-wrapper-13,
+  .frame .div-wrapper-14,
+  .frame .div-wrapper-15,
+  .frame .img-wrapper,
+  .frame .group-2,
+  .frame .vector-wrapper,
+  .frame .group {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 6px;
+  }
+
+  .frame .div-wrapper {
+    width: calc(50% - 12px) !important;
+    height: 50px;
+  }
+
+  .frame .text-wrapper-4,
+  .frame .text-wrapper-5 {
+    font-size: 18px;
+  }
+
+  .frame .text-wrapper,
+  .frame .text-wrapper-2,
+  .frame .text-wrapper-3 {
+    font-size: 18px;
+  }
 }
