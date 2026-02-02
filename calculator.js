@@ -162,7 +162,10 @@ class Calculator {
     } else {
       let historyText = this.previousOperand;
       if (this.operation) {
-        historyText += ` <span class="text-wrapper-7">${this.operation}</span> `;
+        let displayOp = this.operation;
+        if (this.operation === '*') displayOp = 'x';
+        if (this.operation === '/') displayOp = '÷';
+        historyText += ` <span class="text-wrapper-7">${displayOp}</span> `;
       }
       if (this.expression) {
         historyText += this.expression;
@@ -190,4 +193,37 @@ class Calculator {
 // Initialize calculator when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   new Calculator();
+  initializeThemeToggle();
 });
+
+// Theme toggle functionality
+function initializeThemeToggle() {
+  const themeToggle = document.querySelector('.theme-toggle');
+  const htmlElement = document.documentElement;
+  const isDarkMode = localStorage.getItem('darkMode') === 'true';
+  
+  // Set initial theme from localStorage
+  if (isDarkMode) {
+    document.body.classList.add('dark-theme');
+    updateThemeButton(true);
+  }
+  
+  themeToggle.addEventListener('click', () => {
+    const isCurrentlyDark = document.body.classList.contains('dark-theme');
+    
+    if (isCurrentlyDark) {
+      document.body.classList.remove('dark-theme');
+      localStorage.setItem('darkMode', 'false');
+      updateThemeButton(false);
+    } else {
+      document.body.classList.add('dark-theme');
+      localStorage.setItem('darkMode', 'true');
+      updateThemeButton(true);
+    }
+  });
+}
+
+function updateThemeButton(isDark) {
+  const themeToggle = document.querySelector('.theme-toggle');
+  themeToggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+}

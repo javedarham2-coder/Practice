@@ -1,4 +1,21 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+:root {
+  --bg-primary: #d9efff;
+  --bg-card: #f6f7fa;
+  --text-primary: #424242;
+  --text-secondary: #808080;
+  --accent-color: #0f9dff;
+}
+
+body.dark-theme {
+  --bg-primary: #0f0f0f;
+  --bg-card: #1e1e1e;
+  --text-primary: #f0f0f0;
+  --text-secondary: #b0b0b0;
+  --accent-color: #00d4ff;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;

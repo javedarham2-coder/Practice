@@ -1,9 +1,10 @@
 .frame {
-  background-color: #d9efff;
+  background-color: var(--bg-primary);
   width: 100%;
   min-width: 1600px;
   min-height: 1200px;
   position: relative;
+  transition: background-color 0.3s ease;
 }
 
 .frame .iphone-pro-x {
@@ -23,11 +24,12 @@
   left: 601px;
   width: 395px;
   height: 832px;
-  background-color: #f6f7fa;
+  background-color: var(--bg-card);
   border-radius: 39px;
   overflow: hidden;
   backdrop-filter: blur(51px) brightness(100%);
   -webkit-backdrop-filter: blur(51px) brightness(100%);
+  transition: background-color 0.3s ease;
 }
 
 .frame .div-wrapper {
@@ -59,7 +61,7 @@
   margin-top: -1px;
   font-family: "Poppins-Medium", Helvetica;
   font-weight: 500;
-  color: #0f9dff;
+  color: var(--accent-color);
   font-size: 32px;
   letter-spacing: 0;
   line-height: normal;
@@ -113,7 +115,7 @@
   width: fit-content;
   font-family: "Poppins-Medium", Helvetica;
   font-weight: 500;
-  color: #0f9dff;
+  color: var(--accent-color);
   font-size: 32px;
   letter-spacing: 0;
   line-height: normal;
@@ -391,36 +393,44 @@
   top: 386px;
   left: 280px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #ade1ff;
   border-radius: 12px;
   position: absolute;
   width: 62px;
   height: 62px;
+  color: #0f9dff;
+  font-size: 32px;
 }
 
 .frame .img {
-  margin-top: 25px;
+
   width: 12px;
   height: 12px;
-  margin-left: 25px;
+  object-fit: contain;
 }
 
 .frame .group-2 {
   top: 386px;
   left: 198px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #ade1ff;
   border-radius: 12px;
   position: absolute;
   width: 62px;
   height: 62px;
+  color: #0f9dff;
+  font-size: 32px;
 }
 
 .frame .img-2 {
-  margin-top: 18px;
+
   width: 12px;
-  height: 27px;
-  margin-left: 24px;
+  height: 27px; 
+  object-fit: contain;
 }
 
 .frame .div-wrapper-14 {
@@ -428,10 +438,13 @@
   height: 62px;
   top: 386px;
   left: 34px;
-  background-color: #ffffff;
-  border-radius: 16px;
-  border: 1px solid;
-  backdrop-filter: blur(6px) brightness(100%);
+    background: linear-gradient(
+    130deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0.4) 100%
+    );
+     border-radius: 16px;
+     backdrop-filter: blur(6px) brightness(100%);
   -webkit-backdrop-filter: blur(6px) brightness(100%);
   display: flex;
   flex-direction: column;
@@ -447,7 +460,7 @@
   width: fit-content;
   font-family: "Poppins-Medium", Helvetica;
   font-weight: 500;
-  color: #848484;
+  color: #38b9ff;
   font-size: 32px;
   letter-spacing: 0;
   line-height: normal;
@@ -457,24 +470,26 @@
   top: 386px;
   left: 116px;
   border-radius: 16px;
-  backdrop-filter: blur(6px) brightness(100%);
-  -webkit-backdrop-filter: blur(6px) brightness(100%);
+
   background: linear-gradient(
     130deg,
     rgba(255, 255, 255, 0.6) 0%,
     rgba(255, 255, 255, 0.4) 100%
   );
+  backdrop-filter: blur(6px) brightness(100%);
+  -webkit-backdrop-filter: blur(6px) brightness(100%);
   position: absolute;
   width: 62px;
   height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .frame .vector {
-  position: absolute;
-  width: 35.16%;
-  height: 29.03%;
-  top: 35.48%;
-  left: 27.75%;
+  width: 22px; 
+  height: auto;
+  object-fit: contain;
 }
 
 .frame .text-wrapper-6 {
@@ -483,10 +498,11 @@
   left: 171px;
   font-family: "Poppins-Medium", Helvetica;
   font-weight: 500;
-  color: #424242;
+  color: var(--text-primary);
   font-size: 48px;
   letter-spacing: 0;
   line-height: normal;
+  transition: color 0.3s ease;
 }
 
 .frame .element {
@@ -495,10 +511,11 @@
   left: 167px;
   font-family: "Poppins-Regular", Helvetica;
   font-weight: 400;
-  color: transparent;
+  color: var(--text-secondary);
   font-size: 24px;
   letter-spacing: 0;
   line-height: normal;
+  transition: color 0.3s ease;
 }
 
 .frame .span {
@@ -506,7 +523,7 @@
 }
 
 .frame .text-wrapper-7 {
-  color: #0f9dff;
+  color: var(--accent-color);
 }
 
 .frame .div-wrapper-15 {
@@ -653,4 +670,31 @@
 
 .frame .text-wrapper-6 {
   display: block;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: var(--accent-color);
+  color: var(--bg-card);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-family: "Poppins-Medium", Helvetica;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
 }
