@@ -810,36 +810,10 @@
 
 /* Responsive button sizing */
 @media (max-width: 1024px) {
-  .frame .div-wrapper,
-  .frame .div-wrapper-2,
-  .frame .div-wrapper-3,
-  .frame .div-wrapper-4,
-  .frame .div-wrapper-5,
-  .frame .div-wrapper-6,
-  .frame .div-wrapper-7,
-  .frame .div-wrapper-8,
-  .frame .div-wrapper-9,
-  .frame .div-wrapper-10,
-  .frame .div-wrapper-11,
-  .frame .div-wrapper-12,
-  .frame .div-wrapper-13,
-  .frame .div-wrapper-14,
-  .frame .div-wrapper-15,
-  .frame .img-wrapper,
-  .frame .group-2,
-  .frame .vector-wrapper,
-  .frame .group {
-    position: static !important;
-    width: auto !important;
-    height: auto !important;
-    top: auto !important;
-    left: auto !important;
-    margin: 8px;
-  }
-
   .frame .div-wrapper {
-    width: calc(50% - 16px) !important;
-    height: 60px;
+    width: 144px;
+    top: 712px;
+    left: 34px;
   }
 
   .frame .text-wrapper-4,
@@ -855,38 +829,6 @@
 }
 
 @media (max-width: 480px) {
-  .frame .div-wrapper,
-  .frame .div-wrapper-2,
-  .frame .div-wrapper-3,
-  .frame .div-wrapper-4,
-  .frame .div-wrapper-5,
-  .frame .div-wrapper-6,
-  .frame .div-wrapper-7,
-  .frame .div-wrapper-8,
-  .frame .div-wrapper-9,
-  .frame .div-wrapper-10,
-  .frame .div-wrapper-11,
-  .frame .div-wrapper-12,
-  .frame .div-wrapper-13,
-  .frame .div-wrapper-14,
-  .frame .div-wrapper-15,
-  .frame .img-wrapper,
-  .frame .group-2,
-  .frame .vector-wrapper,
-  .frame .group {
-    position: static !important;
-    width: auto !important;
-    height: auto !important;
-    top: auto !important;
-    left: auto !important;
-    margin: 6px;
-  }
-
-  .frame .div-wrapper {
-    width: calc(50% - 12px) !important;
-    height: 50px;
-  }
-
   .frame .text-wrapper-4,
   .frame .text-wrapper-5 {
     font-size: 18px;
