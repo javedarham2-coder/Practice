@@ -1,3 +1,3 @@
-My first Repo
-Of UI Calculator
+# My First Repo
+UI Calculator
 
